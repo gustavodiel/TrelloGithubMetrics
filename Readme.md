@@ -24,7 +24,7 @@ Total files changed: 366 (The full list can be found here: https://gist.github.c
 - **TRELLO_LIST_NAME**: The name of the list in the board above. Must be exact!
 - **TRELLO_TOKEN**: Use the link [here](https://trello.com/app-key/) and press on `Generate Token`.
 - **TRELLO_KEY**: You may generate one [here](https://trello.com/app-key/).
-- **GITHUB_ACCES_KEY**: You may generate one [here](https://github.com/settings/tokens).
+- **GITHUB_ACCESS_KEY**: You may generate one [here](https://github.com/settings/tokens).
   - The token must have the following accesses:
     - Full control of private repositories (needed)
     - Create Gists (only if you set **CREATE_GIST** to `True`)
