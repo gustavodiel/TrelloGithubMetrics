@@ -1,5 +1,17 @@
 # Trello Metrics
 
+The objective of this repo is to have a nice little script that may fetch data from a [Trello](https://Trello.com) board, and within a certain list, fetch all the **Pull Requests** that are attached to the cards. With all those PRs, the script will also fetch all the info related to the PR and display like this:
+```
+Cards in Done: 169
+PRs in Done: 179
+Added lines: 20127
+Removed lines: 7029
+Added lines on master: 16483
+Removed lines on master: 6199
+Created commits: 1523
+Total files changed: 366 (The full list can be found here: https://gist.github.com/USER/CREATED_GIST)
+```
+
 ## Requirements
 - Python 3
 - Pips: `pip install py-trello PyGithub`

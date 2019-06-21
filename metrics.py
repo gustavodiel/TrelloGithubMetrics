@@ -86,10 +86,9 @@ for github_url in github_urls:
         pr = repo.get_pull(int(pr_id))
         prs.append(pr)
     else:
-        print("This is not a PR: " + github_url)
+        print("Found a non-PR link: " + github_url)
 
 for pr in prs:
-    print("{}: {} additions and {} deletions. It is {} and {}".format(pr.title, pr.additions, pr.deletions, pr.merged, pr.state))
     total_aditions += pr.additions
     total_deletions += pr.deletions
     paginated_files.append(pr.get_files())
@@ -118,17 +117,17 @@ if CREATE_GIST:
 gist_print_string = ''
 
 if gist_url:
-    gist_print_string = '(A lista pode ser encontrada em {})'.format(gist_url)
+    gist_print_string = '(The full list can be found here: {})'.format(gist_url)
 
 print(
     """
-    Total de cards em Done: {}
-    Total de PRs em Done: {}
-    Total de linhas adicionadas: {}
-    Total de linhas removidas: {}
-    Total de linhas adicionadas que foram pra master: {}
-    Total de linhas removidas da master: {}
-    Commits criados: {}
-    Total de arquivos que modificamos/criamos: {} {}
+    Cards in Done: {}
+    PRs in Done: {}
+    Added lines: {}
+    Removed lines: {}
+    Added lines on master: {}
+    Removed lines on master: {}
+    Created commits: {}
+    Total files changed: {} {}
     """.format(len(cards), len(prs), total_aditions, total_deletions, real_total_aditions, real_total_deletions, commit_num, len(uniq), gist_print_string)
 )
